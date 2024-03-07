@@ -10,6 +10,8 @@ export const addListMember = async (email: any) => {
   try {
     // Call Mailchimp API to add member to list
     const groupId = process.env.MAILCHIMP_GROUP_ID || "";
+    console.log(groupId)
+
     const response = await client.lists.addListMember(groupId, {
       email_address: email,
       status: "subscribed",
