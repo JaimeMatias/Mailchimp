@@ -15,6 +15,7 @@ export default function SignUpForm() {
     const email = event.currentTarget.email.value;
     console.log(`name: ${name}`);
     console.log(`username: ${email}`);
+    console.log(`MailChimp: ${process.env.MAILCHIMP_API_KEY}`)
     await addListMember(email)
   };
 
